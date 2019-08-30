@@ -81,8 +81,54 @@
 #   end 
 # end
 
-begin
-  File.open('hello.txt')
-rescue => error_object
-  puts "sorry that file doesn't exist... choose another file"
+# begin
+#   File.open('hello.txt')
+# rescue => error_object
+#   puts "sorry that file doesn't exist... choose another file"
+# end 
+
+# require_relative "work/separate_file"
+
+# p print_name
+
+# def my_method
+#   puts "in my method"
+#   return "harrison"
+# end 
+
+# class Dog 
+#   def initialize(name) 
+#     @name = name
+#   end 
+# end 
+
+# p File.dirname(__FILE__)
+
+# p Dog.new("tilly")
+
+# my_method
+
+# require_relative 
+
+module DogApplicationProfileSection
+  def print_dog_name
+    return @name
+  end 
 end 
+
+module DogApplicationAlgorithm 
+  def print_dog_name
+    return name
+  end 
+end 
+
+class Dog 
+  include DogApplicationProfileSection
+  def initialize(name)
+    @name = name
+  end 
+  
+end 
+
+tilly = Dog.new("tilly")
+p tilly.print_dog_name
